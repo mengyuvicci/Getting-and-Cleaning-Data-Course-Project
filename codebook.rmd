@@ -2,7 +2,7 @@
 
 This document describes the code inside run_analysis.R.
 
-##The code is splitted (by comments) in some sections:
+##The code is splitted in some sections:
 
 Manipulating data 
 
@@ -31,27 +31,27 @@ Assign names "activity" & "subject" to activityData & subjectData
 
 Assigne feature names to featuresData
 
-1. Merges the training and the test sets to create one data set
+* Merges the training and the test sets to create one data set
 
 Cbind featuresData, activityData & subjectData
 
-2. Extracts only the measurements on the mean and standard deviation for each measurement
+* Extracts only the measurements on the mean and standard deviation for each measurement
 
 Use grep() function to find the feature names that match "mean()" & "std()"
 
 Use subset() function to query the subset with matching patterns
 
-3. Uses descriptive activity names to name the activities in the data set
+* Uses descriptive activity names to name the activities in the data set
 
 Loop function to replace activity numbers to activity labels
 
-4. Appropriately labels the data set with descriptive variable names
+* Appropriately labels the data set with descriptive variable names
 
 Use gsub() function to subisitute the short variable names to descriptive variable names
 
 ###Writing final data to txt file
 
-5. creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+* creates a second, independent tidy data set with the average of each variable for each activity and each subject.
  
 Load plyr library and use aggregate() function to get the average values of each varialbe for each activity and each subject
 
