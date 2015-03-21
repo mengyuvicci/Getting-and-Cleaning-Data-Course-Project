@@ -1,10 +1,10 @@
-Code Book
+##Code Book
 
 This document describes the code inside run_analysis.R.
 
 The code is splitted (by comments) in some sections:
 
-Manipulating data
+Manipulating data\n
 Writing final data to txt file
 
 Manipulating data:
