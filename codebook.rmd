@@ -33,26 +33,26 @@ Assigne feature names to featuresData
 
 * Merges the training and the test sets to create one data set
 
-Cbind featuresData, activityData & subjectData
+   Cbind featuresData, activityData & subjectData
 
 * Extracts only the measurements on the mean and standard deviation for each measurement
 
-Use grep() function to find the feature names that match "mean()" & "std()"
+   Use grep() function to find the feature names that match "mean()" & "std()"
 
-Use subset() function to query the subset with matching patterns
+   Use subset() function to query the subset with matching patterns
 
 * Uses descriptive activity names to name the activities in the data set
 
-Loop function to replace activity numbers to activity labels
+   Loop function to replace activity numbers to activity labels
 
 * Appropriately labels the data set with descriptive variable names
 
-Use gsub() function to subisitute the short variable names to descriptive variable names
+   Use gsub() function to subisitute the short variable names to descriptive variable names
 
 ###Writing final data to txt file
 
 * creates a second, independent tidy data set with the average of each variable for each activity and each subject.
  
-Load plyr library and use aggregate() function to get the average values of each varialbe for each activity and each subject
+   Load plyr library and use aggregate() function to get the average values of each varialbe for each activity and each subject
 
-Use write.table() function to generate tidyDataSet.txt
+   Use write.table() function to generate tidyDataSet.txt
