@@ -7,6 +7,7 @@ subjectTrainData <- read.table('./UCI HAR Dataset/train/subject_train.txt', head
 
 featuresTestData <- read.table('./UCI HAR Dataset/test/X_test.txt', header = F)
 featuresTrainData <- read.table('./UCI HAR Dataset/train/X_train.txt', header = F)
+featureNames <- read.table('./UCI HAR Dataset/features.txt', header = F)
 
 activityData <- rbind(activityTestData, activityTrainData)
 subjectData <- rbind(subjectTestData, subjectTrainData)
@@ -14,7 +15,6 @@ featuresData <- rbind(featuresTestData, featuresTrainData)
 
 names(activityData) <- c("activity")
 names(subjectData) <- c("subject")
-featureNames <- read.table('./UCI HAR Dataset/features.txt', header = F)
 names(featuresData) <- featureNames$V2
 
 oneDataSet <- cbind(featuresData, activityData, subjectData) 
